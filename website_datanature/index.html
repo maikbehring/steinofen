@@ -14,8 +14,16 @@
             <p class="count">Gesamt: 130 Artikel | Im Sortiment: 29 | Vegan: 54</p>
             
             <div class="search-container">
-                <input type="text" id="search-input" class="search-input" placeholder="Suche nach Produktname..." autocomplete="off">
-                <button id="clear-search" class="clear-search" style="display: none;">✕</button>
+                <div class="search-wrapper">
+                    <input type="text" id="search-input" class="search-input" placeholder="Suche nach Produktname..." autocomplete="off">
+                    <button id="clear-search" class="clear-search" style="display: none;" title="Suche löschen">✕</button>
+                </div>
+                <div class="filter-container">
+                    <button id="vegan-filter" class="filter-button" title="Nur vegane Artikel anzeigen">
+                        <span class="filter-icon">🌱</span>
+                        <span class="filter-text">Nur vegan</span>
+                    </button>
+                </div>
             </div>
         </header>
         
