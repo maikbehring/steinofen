@@ -194,6 +194,23 @@ header h1 {
     gap: 8px;
 }
 
+#sortiment-filter {
+    color: #2196f3;
+    border-color: #2196f3;
+    box-shadow: 0 2px 6px rgba(33, 150, 243, 0.15);
+}
+
+#sortiment-filter:hover {
+    background: #e3f2fd;
+    box-shadow: 0 4px 10px rgba(33, 150, 243, 0.25);
+}
+
+#sortiment-filter.active {
+    background: #2196f3;
+    color: white;
+    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+}
+
 .filter-button:hover {
     background: #f1f8f4;
     box-shadow: 0 4px 10px rgba(76, 175, 80, 0.25);
