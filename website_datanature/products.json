@@ -72,6 +72,18 @@
     "kategorie": "Brot"
   },
   {
+    "name": "Rosinenbrot",
+    "folder": "Rosinenbrot",
+    "image": "images/Rosinenbrot/datanature_bild_1.jpg",
+    "zutaten": "Wasser, Sultaninen*, WEIZENVOLLKORNMEHL*, WEIZENMEHL TYPE 550*, DINKELVOLLKORNMEHL* ², BUTTER*, Rohrohrzucker*, WEIZENSCHROT*, Meersalz, HEFE*, HAFER*, ROGGENSCHROT*, SESAM*, Kürbiskerne*, Sonnenblumenkerne*, Leinsamen braun*, DINKELSCHROT* ², Hirse*, KAMUT® KHORASAN WEIZENSCHROT*, GERSTE*, Naturreis*, Mohn*, Quinoa*, Buchweizen*, GERSTENMALZMEHL*, DINKEL Starter*² (DINKELschrot* ², DINKELmehl* ², Wasser, Meersalz, Lactobacillaceae). ²= (UR-WEIZEN)*aus kontrolliert ökologischer Erzeugung",
+    "beschreibung": "",
+    "allergikerhinweise": "enthaltenKann in Spuren enthalten seinNicht enthalten (ohne Analyse)Garantiert nicht enthalten",
+    "naehrwerte": "Ja",
+    "vegan": false,
+    "in_sortiment": true,
+    "kategorie": "Brot"
+  },
+  {
     "name": "Dinkel-Schrotling",
     "folder": "Dinkel-Schrotling",
     "image": "images/Dinkel-Schrotling/datanature_bild_1.jpg",
@@ -336,6 +348,18 @@
     "kategorie": "Sonstiges"
   },
   {
+    "name": "SBK-Saftkorn",
+    "folder": "SBK-Saftkorn",
+    "image": "images/SBK-Saftkorn/datanature_bild_1.jpg",
+    "zutaten": "Wasser, WEIZENVOLLKORNMEHL*, ROGGENSCHROT*, ROGGENVOLLKORNMEHL*, Sonnenblumenkerne*, Meersalz, BIOHEFE*, GERSTENMALZMEHL*, ROGGEN StartGut® Bio* (ROGGENschrot*, Wasser, ROGGENmehl*, Trockenglucose*, Lactobacillaceae)*aus kontrolliert ökologischer Erzeugung",
+    "beschreibung": "",
+    "allergikerhinweise": "enthaltenKann in Spuren enthalten seinNicht enthalten (ohne Analyse)Garantiert nicht enthalten",
+    "naehrwerte": "Ja",
+    "vegan": true,
+    "in_sortiment": true,
+    "kategorie": "Sonstiges"
+  },
+  {
     "name": "Schweineoehrchen",
     "folder": "Schweineoehrchen",
     "image": "images/Schweineoehrchen/datanature_bild_1.jpg",
@@ -440,18 +464,6 @@
     "allergikerhinweise": "enthaltenKann in Spuren enthalten seinNicht enthalten (ohne Analyse)Garantiert nicht enthalten",
     "naehrwerte": "Ja",
     "vegan": true,
-    "in_sortiment": false,
-    "kategorie": "Brot"
-  },
-  {
-    "name": "Rosinenbrot",
-    "folder": "Rosinenbrot",
-    "image": "images/Rosinenbrot/datanature_bild_1.jpg",
-    "zutaten": "Wasser, Sultaninen*, WEIZENVOLLKORNMEHL*, WEIZENMEHL TYPE 550*, DINKELVOLLKORNMEHL* ², BUTTER*, Rohrohrzucker*, WEIZENSCHROT*, Meersalz, HEFE*, HAFER*, ROGGENSCHROT*, SESAM*, Kürbiskerne*, Sonnenblumenkerne*, Leinsamen braun*, DINKELSCHROT* ², Hirse*, KAMUT® KHORASAN WEIZENSCHROT*, GERSTE*, Naturreis*, Mohn*, Quinoa*, Buchweizen*, GERSTENMALZMEHL*, DINKEL Starter*² (DINKELschrot* ², DINKELmehl* ², Wasser, Meersalz, Lactobacillaceae). ²= (UR-WEIZEN)*aus kontrolliert ökologischer Erzeugung",
-    "beschreibung": "",
-    "allergikerhinweise": "enthaltenKann in Spuren enthalten seinNicht enthalten (ohne Analyse)Garantiert nicht enthalten",
-    "naehrwerte": "Ja",
-    "vegan": false,
     "in_sortiment": false,
     "kategorie": "Brot"
   },
@@ -1400,18 +1412,6 @@
     "allergikerhinweise": "enthaltenKann in Spuren enthalten seinNicht enthalten (ohne Analyse)Garantiert nicht enthalten",
     "naehrwerte": "Ja",
     "vegan": false,
-    "in_sortiment": false,
-    "kategorie": "Sonstiges"
-  },
-  {
-    "name": "SBK-Saftkorn",
-    "folder": "SBK-Saftkorn",
-    "image": "images/SBK-Saftkorn/datanature_bild_1.jpg",
-    "zutaten": "Wasser, WEIZENVOLLKORNMEHL*, ROGGENSCHROT*, ROGGENVOLLKORNMEHL*, Sonnenblumenkerne*, Meersalz, BIOHEFE*, GERSTENMALZMEHL*, ROGGEN StartGut® Bio* (ROGGENschrot*, Wasser, ROGGENmehl*, Trockenglucose*, Lactobacillaceae)*aus kontrolliert ökologischer Erzeugung",
-    "beschreibung": "",
-    "allergikerhinweise": "enthaltenKann in Spuren enthalten seinNicht enthalten (ohne Analyse)Garantiert nicht enthalten",
-    "naehrwerte": "Ja",
-    "vegan": true,
     "in_sortiment": false,
     "kategorie": "Sonstiges"
   },
