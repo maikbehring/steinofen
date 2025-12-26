@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Logs
+*.log
+datanature_scraping.log
+datanature_download.log
+
+# Downloads (nicht für Netlify benötigt)
+downloads/
+
+# Website (alte)
+website/
+
+# Scripts (nicht für Netlify benötigt)
+*.py
+!website_datanature/serve.py
+
+# CSV/JSON (nur für Scripts)
+artikel.csv
+artikel.json
+url_mapping.json
+
+# PDF
+*.pdf
+
+# Weiling Login
+weiling_login.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Nur website_datanature/ für Netlify
+# Alles andere wird ignoriert
