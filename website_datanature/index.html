@@ -1853,42 +1853,47 @@
     </div>
     
     <script>
-        // Suchfunktion
+        // Suchfunktion und Filter
         const searchInput = document.getElementById('search-input');
         const clearSearch = document.getElementById('clear-search');
+        const veganFilter = document.getElementById('vegan-filter');
         const productsGrid = document.getElementById('products-grid');
         const productCards = Array.from(productsGrid.querySelectorAll('.product-card'));
+        
+        let veganFilterActive = false;
         
         function filterProducts() {
             const searchTerm = searchInput.value.toLowerCase().trim();
             
-            if (searchTerm === '') {
-                // Zeige alle Produkte
-                productCards.forEach(card => {
-                    card.style.display = '';
-                });
+            // Zeige/verstecke Clear-Button
+            if (searchTerm === '' && !veganFilterActive) {
                 clearSearch.style.display = 'none';
-                // Entferne "Keine Ergebnisse" falls vorhanden
-                const noResults = document.getElementById('no-results');
-                if (noResults) {
-                    noResults.remove();
-                }
-                return;
+            } else {
+                clearSearch.style.display = 'block';
             }
             
-            clearSearch.style.display = 'block';
-            
-            // Filtere Produkte (nur nach Produktname)
+            // Filtere Produkte
             let visibleCount = 0;
             productCards.forEach(card => {
-                const productNameElement = card.querySelector('.product-name');
-                // Entferne Badges aus dem Namen für die Suche
-                const productNameText = productNameElement.cloneNode(true);
-                const badges = productNameText.querySelectorAll('.vegan-badge');
-                badges.forEach(badge => badge.remove());
-                const productName = productNameText.textContent.toLowerCase().trim();
+                // Prüfe Suchbegriff
+                let matchesSearch = true;
+                if (searchTerm !== '') {
+                    const productNameElement = card.querySelector('.product-name');
+                    const productNameText = productNameElement.cloneNode(true);
+                    const badges = productNameText.querySelectorAll('.vegan-badge');
+                    badges.forEach(badge => badge.remove());
+                    const productName = productNameText.textContent.toLowerCase().trim();
+                    matchesSearch = productName.includes(searchTerm);
+                }
                 
-                if (productName.includes(searchTerm)) {
+                // Prüfe Vegan-Filter
+                let matchesVeganFilter = true;
+                if (veganFilterActive) {
+                    matchesVeganFilter = card.classList.contains('product-card-vegan');
+                }
+                
+                // Zeige/verstecke Karte
+                if (matchesSearch && matchesVeganFilter) {
                     card.style.display = '';
                     visibleCount++;
                 } else {
@@ -1896,25 +1901,25 @@
                 }
             });
             
-            // Zeige "Keine Ergebnisse" wenn nichts gefunden
-            let noResults = document.getElementById('no-results');
+            // Zeige "Keine Ergebnisse" falls nötig
             if (visibleCount === 0) {
+                let noResults = document.getElementById('no-results');
                 if (!noResults) {
                     noResults = document.createElement('div');
                     noResults.id = 'no-results';
                     noResults.className = 'no-results';
-                    noResults.textContent = 'Keine Produkte gefunden.';
+                    noResults.textContent = 'Keine Ergebnisse gefunden';
                     productsGrid.appendChild(noResults);
                 }
-                noResults.style.display = 'block';
             } else {
+                const noResults = document.getElementById('no-results');
                 if (noResults) {
-                    noResults.style.display = 'none';
+                    noResults.remove();
                 }
             }
         }
         
-        // Event Listener
+        // Event Listener für Suche
         searchInput.addEventListener('input', filterProducts);
         searchInput.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
@@ -1925,6 +1930,14 @@
         
         clearSearch.addEventListener('click', function() {
             searchInput.value = '';
+            filterProducts();
+            searchInput.focus();
+        });
+        
+        // Event Listener für Vegan-Filter
+        veganFilter.addEventListener('click', function() {
+            veganFilterActive = !veganFilterActive;
+            veganFilter.classList.toggle('active', veganFilterActive);
             filterProducts();
         });
     </script>
