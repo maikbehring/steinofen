@@ -51,18 +51,37 @@ python3 -m http.server 8000
 
 ### Automatisches Deployment
 
-1. Verbinden Sie das GitHub-Repository mit Netlify:
+1. **Repository verbinden:**
    - Gehen Sie zu [Netlify](https://www.netlify.com)
-   - Klicken Sie auf "New site from Git"
-   - Wählen Sie GitHub und das Repository `maikbehring/steinofen`
+   - Klicken Sie auf **"Add new site"** → **"Import an existing project"**
+   - Wählen Sie **GitHub** als Git-Provider
+   - Autorisiere Netlify für den Zugriff auf Ihr GitHub-Konto
+   - Wählen Sie das Repository **`maikbehring/steinofen`**
 
-2. Build-Einstellungen:
-   - **Build command:** (leer lassen - statische Website)
+2. **Build-Einstellungen konfigurieren:**
+   
+   **WICHTIG:** Diese Einstellungen müssen Sie setzen:
+   
+   - **Branch to deploy:** `main` (oder `master`, je nachdem)
+   - **Build command:** *(leer lassen - keine Build-Schritte nötig)*
    - **Publish directory:** `website_datanature`
+   
+   ⚠️ **Wichtig:** Das Publish directory muss `website_datanature` sein, da sich die Website-Dateien dort befinden!
 
-3. Deploy!
+3. **Deploy starten:**
+   - Klicken Sie auf **"Deploy site"**
+   - Netlify erstellt automatisch eine URL (z.B. `https://random-name-123.netlify.app`)
+   - Die Website ist sofort live!
 
-Die Website wird automatisch bei jedem Push ins `main`-Branch neu deployed.
+4. **Automatische Updates:**
+   - Bei jedem Push ins `main`-Branch wird die Website automatisch neu deployed
+   - Sie können auch manuell über das Netlify-Dashboard deployen
+
+### Optionale Einstellungen
+
+- **Custom Domain:** Sie können eine eigene Domain hinzufügen (z.B. `produkte.steinofenbaecker.de`)
+- **Branch Deploys:** Aktivieren Sie "Deploy previews" für Pull Requests
+- **Build Hooks:** Für manuelle Deployments via API
 
 ### Manuelles Deployment
 
